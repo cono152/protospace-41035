@@ -1,0 +1,28 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "メールアドレスを入力してください"
+              taken: "このメールアドレスは既に使用されています"
+            password:
+              blank: "パスワードを入力してください"
+            password_confirmation:
+              confirmation: "パスワード確認が一致しません"
+            name:
+              blank: "名前を入力してください"
+            profile:
+              blank: "プロフィールを入力してください"
+            occupation:
+              blank: "職業を入力してください"
+            position:
+              blank: "ポジションを入力してください"
+          required: "このフィールドは必須です"
+  errors:
+    messages:
+      not_saved: "保存できませんでした。エラーを確認してください。"
+      blank: "このフィールドは必須です。"
+      taken: "この値は既に使用されています"
+      required: "このフィールドは必須です"

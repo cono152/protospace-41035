@@ -1,0 +1,12 @@
+<div class="contents row">
+  <div class="container">
+    <h3>新規プロトタイプ投稿</h3>
+    <%= form_with(model: @prototype, local: true) do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_field :catch_copy %>
+  <%= form.text_area :concept %>
+  <%= form.file_field :image %>
+  <%= form.submit %>
+<% end %>
+  </div>
+</div>

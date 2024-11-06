@@ -1,0 +1,14 @@
+<div class="card">
+  <% if prototype.image.attached? %>
+    <%= link_to image_tag(url_for(prototype.image), class: :card__img), prototype_path(prototype) %>
+  <% else %>
+    <%= link_to image_tag("4189debba0b30f2fc8cf5705fbf6b367.png", class: :card__img), prototype_path(prototype) %>
+  <% end %>
+  <div class="card__body">
+    <%= link_to (prototype.title.presence || "No Title"), prototype_path(prototype), class: :card__title %>
+    <p class="card__summary">
+      <%= prototype.catch_copy.presence || "No Catch Copy" %>
+    </p>
+    <%= link_to (prototype.user.name.presence || "Unknown User"), user_path(prototype.user), class: :card__user %>
+  </div>
+</div>

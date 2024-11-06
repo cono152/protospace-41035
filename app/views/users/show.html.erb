@@ -1,0 +1,39 @@
+<main class="main">
+  <div class="inner">
+    <div class="user-profile">
+      <h1><%= @user.name %>さんのプロフィール</h1>
+      <p>
+        <strong>メールアドレス:</strong>
+        <%= @user.email %>
+      </p>
+      <p>
+        <strong>プロフィール:</strong>
+        <%= @user.profile %>
+      </p>
+      <p>
+        <strong>職業:</strong>
+        <%= @user.occupation %>
+      </p>
+      <p>
+        <strong>ポジション:</strong>
+        <%= @user.position %>
+      </p>
+    </div>
+
+    <div class="user_prototypes">
+      <h2><%= @user.name %>さんのプロトタイプ一覧</h2>
+      <%= render partial: 'prototypes/prototype', collection: @user_prototypes %>
+    </div>
+
+    <div class="user_comments">
+      <h2><%= @user.name %>さんのコメント一覧</h2>
+      <ul>
+        <% @comments.each do |comment| %>
+          <li>
+            <%= comment.text %> - <i>プロトタイプ:</i> <%= link_to comment.prototype.title, prototype_path(comment.prototype) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</main>
